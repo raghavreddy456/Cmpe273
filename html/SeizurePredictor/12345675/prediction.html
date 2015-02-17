@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Seizure Predictor</title>
+<link rel="stylesheet" type="text/css" href="accountStyle.css"/>
+</head>
+<body onload="myFunction()">
+<div align="center" >
+<h1>Predictor Analysis Reponse</h1>
+</div>
+
+
+<p id="result"></p>
+
+<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+<script>
+function myFunction() { 
+    $.getJSON("./result/result.json", function(data) {
+ 
+    var output="";
+    for(var i in data.patients) {
+        output += data.patients[i].result ;
+    }
+
+    if(String(output) == String("Seizure!")) {
+        $("body").css('background-color', 'red');
+    }else if(String(output) == String("Warning")) {
+	$("body").css('background-color', 'orange');
+    }else if(String(output) == String("Ok")) {
+        $("body").css('background-color', 'green');
+    }else {
+        $("body").css('background-color', 'blue');
+    }      
+
+    output+="";
+
+    document.getElementById("result").innerHTML = output;
+	
+   });
+
+}
+
+
+</script>
+
+</body>
+
+
+
+
+</html>

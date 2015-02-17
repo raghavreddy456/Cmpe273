@@ -1,0 +1,1 @@
+jsonstr = [ { "patient": "25", "prediction": "Seizure!" } ];

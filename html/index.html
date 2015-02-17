@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML>
+   <HEAD>
+      <TITLE>
+         Login
+      </TITLE>
+   </HEAD>
+<!-- <BODY>
+   <H1>Seizure Predictor Login</H1>
+   <P>Username:</P>
+   <textarea rows="4" cols="50"></textarea>
+   <P>Password:</P>
+   <textarea rows="4" cols="50"></textarea>
+   <button type="button">Login</button> 
+</BODY> -->
+<!-- <H1>Seizure Predictor Login</H1>
+<form action="goToUserFolder.js">
+  Username: <input type="text" name="username" ><br><br>
+  Password: <input type="text" name="pwd" ><br><br>
+  <input type="submit" value="Login">
+</form> -->
+
+
+<H1>Seizure Predictor Login</H1>
+<BODY>
+  Username: <input type="text" name="username" id="username"><br><br>
+  Password: <input type="text" name="pwd" id="pwd"><br><br>
+
+
+<button onclick="myFunction()">Login</button>
+
+<p id="name"></p>
+<p id="pwd2"></p>
+
+<script type="text/javascript">
+function myFunction() {
+    var x = document.getElementById("username").value;
+    var pwd = document.getElementById("pwd").value;
+    document.getElementById("user").innerHTML = x;
+    document.getElementById("pwd2").innerHTML = pwd;
+}
+</script>
+
+</BODY>
+
+
+</HTML>
